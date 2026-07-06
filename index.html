@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>稼 轩 词 句</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai&display=swap');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     background: #f4efe4;
-    font-family: "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", "Noto Serif SC", serif;
+    font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
@@ -31,9 +31,9 @@
 
   .btn-reveal {
     display: inline-block;
-    padding: 16px 48px;
+    padding: 12px 36px;
     font-family: inherit;
-    font-size: 36px;
+    font-size: 22px;
     letter-spacing: 2px;
     color: #6b5a4a;
     background: rgba(255,255,255,0.3);
@@ -60,7 +60,7 @@
 
   .verse-display {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(12px);
     transition: opacity 0.8s ease, transform 0.8s ease;
     pointer-events: none;
   }
@@ -71,25 +71,24 @@
   }
 
   .verse-text {
-    font-size: 38px;
+    font-size: 22px;
     color: #3d3226;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     line-height: 2;
-    padding: 0 8px;
+    padding: 0 12px;
     word-break: keep-all;
     overflow-wrap: break-word;
   }
 
-  /* ══════════ 平板 / 小屏桌面 ══════════ */
+  /* ══════════ 平板 ══════════ */
   @media (max-width: 768px) {
     .btn-reveal {
-      font-size: 26px;
-      padding: 14px 36px;
-      letter-spacing: 1px;
+      font-size: 18px;
+      padding: 10px 28px;
     }
     .verse-text {
-      font-size: 26px;
-      letter-spacing: 3px;
+      font-size: 18px;
+      letter-spacing: 2px;
       line-height: 1.9;
     }
   }
@@ -100,27 +99,14 @@
       padding: 20px 16px;
     }
     .btn-reveal {
-      font-size: 22px;
-      padding: 12px 28px;
+      font-size: 16px;
+      padding: 10px 24px;
     }
     .verse-text {
-      font-size: 20px;
-      letter-spacing: 2px;
-      line-height: 1.85;
-      padding: 0 4px;
-    }
-  }
-
-  /* ══════════ 小屏手机 ══════════ */
-  @media (max-width: 360px) {
-    .btn-reveal {
-      font-size: 19px;
-      padding: 10px 22px;
-    }
-    .verse-text {
-      font-size: 18px;
-      letter-spacing: 1px;
-      line-height: 1.75;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      line-height: 1.9;
+      padding: 0 8px;
     }
   }
 
