@@ -5,16 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>稼 轩 词 句</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f4efe4;
-    font-family: "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
+    font-family: "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", "Noto Serif SC", serif;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* ══════════ 主体内容 ══════════ */
@@ -22,6 +26,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
+    padding: 24px 20px;
   }
 
   .btn-reveal {
@@ -38,6 +43,7 @@
     transition: all 0.35s ease;
     outline: none;
     backdrop-filter: blur(4px);
+    -webkit-tap-highlight-color: transparent;
   }
   .btn-reveal:hover {
     color: #fdfaf5;
@@ -69,7 +75,53 @@
     color: #3d3226;
     letter-spacing: 5px;
     line-height: 2;
-    padding: 0 32px;
+    padding: 0 8px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* ══════════ 平板 / 小屏桌面 ══════════ */
+  @media (max-width: 768px) {
+    .btn-reveal {
+      font-size: 26px;
+      padding: 14px 36px;
+      letter-spacing: 1px;
+    }
+    .verse-text {
+      font-size: 26px;
+      letter-spacing: 3px;
+      line-height: 1.9;
+    }
+  }
+
+  /* ══════════ 手机 ══════════ */
+  @media (max-width: 480px) {
+    .stage {
+      padding: 20px 16px;
+    }
+    .btn-reveal {
+      font-size: 22px;
+      padding: 12px 28px;
+    }
+    .verse-text {
+      font-size: 20px;
+      letter-spacing: 2px;
+      line-height: 1.85;
+      padding: 0 4px;
+    }
+  }
+
+  /* ══════════ 小屏手机 ══════════ */
+  @media (max-width: 360px) {
+    .btn-reveal {
+      font-size: 19px;
+      padding: 10px 22px;
+    }
+    .verse-text {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 1.75;
+    }
   }
 
 </style>
