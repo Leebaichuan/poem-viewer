@@ -365,8 +365,8 @@ const verses = [
 ];
 
 function reveal() {
-  // 青玉案·元夕 2倍权重
-  const weighted = [...verses, ...verses.slice(0, 4)];
+  // 青玉案·元夕 3倍权重
+  const weighted = [...verses, ...verses.slice(0, 4), ...verses.slice(0, 4)];
   const idx = Math.floor(Math.random() * weighted.length);
   document.getElementById("verseText").textContent = weighted[idx];
 
