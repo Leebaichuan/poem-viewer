@@ -69,7 +69,7 @@
   /* ══════════ 平板 ══════════ */
   @media (max-width: 768px) {
     body {
-      font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
+      font-family: "STKaiti", "LXGW WenKai", "KaiTi", "楷体", "AR PL UKai CN", serif;
     }
     .stage {
       padding: 24px 20px;
