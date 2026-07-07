@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>稼 轩 词 句</title>
-<!-- 霞鹜文楷：用 link 加载比 @import 更早触发下载，减少字体闪烁 -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" as="style">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
+<!-- 霞鹜文楷仅在移动端加载，桌面端用系统楷体 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" media="(max-width: 768px)">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -17,7 +16,7 @@
     align-items: center;
     justify-content: center;
     background: #f4efe4;
-    font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
+    font-family: "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
     user-select: none;
   }
 
@@ -78,6 +77,9 @@
 
   /* ══════════ 平板 ══════════ */
   @media (max-width: 768px) {
+    body {
+      font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
+    }
     .stage {
       padding: 24px 20px;
     }
