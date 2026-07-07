@@ -1,0 +1,106 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4efe4;
+    font-family: "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
+    user-select: none;
+  }
+
+  /* ══════════ 桌面端（保持原样） ══════════ */
+  .stage {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .btn-reveal {
+    display: inline-block;
+    padding: 16px 48px;
+    font-family: inherit;
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: #6b5a4a;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(140, 110, 80, 0.3);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    outline: none;
+    backdrop-filter: blur(4px);
+  }
+  .btn-reveal:hover {
+    color: #fdfaf5;
+    background: rgba(100, 75, 50, 0.75);
+    border-color: transparent;
+  }
+  .btn-reveal:active {
+    transform: scale(0.96);
+    transition: transform 0.08s ease;
+  }
+  .btn-reveal.gone {
+    display: none;
+  }
+
+  .verse-display {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+  }
+  .verse-display.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .verse-text {
+    font-size: 38px;
+    color: #3d3226;
+    letter-spacing: 5px;
+    line-height: 2;
+    padding: 0 32px;
+  }
+
+  /* ══════════ 平板 ══════════ */
+  @media (max-width: 768px) {
+    body {
+      font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif;
+    }
+    .stage {
+      padding: 24px 20px;
+    }
+    .btn-reveal {
+      font-size: 24px;
+      padding: 14px 36px;
+    }
+    .verse-text {
+      font-size: 22px;
+      letter-spacing: 3px;
+      line-height: 1.9;
+      padding: 0 16px;
+    }
+  }
+
+  /* ══════════ 手机 ══════════ */
+  @media (max-width: 480px) {
+    .stage {
+      padding: 20px 16px;
+    }
+    .btn-reveal {
+      font-size: 17px;
+      padding: 10px 24px;
+    }
+    .verse-text {
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 1.85;
+      padding: 0 8px;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+  }
